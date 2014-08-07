@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC>
+<HTML>
+	<HEAD>
+		<title>THE FOOBAR</title>
+		
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+		<style>
+
+
+			body {
+
+				background-attachment: fixed;
+				background-size: 100%;
+				color : black;
+				text-align: center;
+				font-family: "Courier New";
+				font-size: 400%;
+
+			}
+
+			p1{
+				font-family: Courier;
+				font-size: 250%;
+			}
+
+
+			#btnimg {
+				width: auto;
+				height: 40%;
+			}
+
+			.input {
+				width: 20%;
+				height: 5%;
+			}
+
+
+			#submit {
+				width: 10%;
+				height: 5%;
+
+			}
+
+			#panel {
+				border-top: solid 2px #CC9966;
+				background: white;
+				height: 1000px;
+				display: none;
+			}
+
+			.slide {
+				margin: 0;
+				padding: 0;
+				border-top: solid 2px #CC9966;
+
+				
+			}
+
+			.btn-slide {
+				text-align: center;
+				width: 100px;
+				height: 50px;
+				padding: 0px 100px 0 0;
+				margin-bottom: 100px;
+				display: block;
+				color: #fff;
+				text-decoration: none;
+			}
+
+			
+
+		</style>
+		
+	</HEAD>
+	<BODY>
+		<div style="margin-top: 5%;">
+			<p1>THE FOOBAR</p1>
+		</div>
+
+		<div style="margin-top: 8%;">
+
+			<p>What would you like to drink?</p>
+
+		</div>
+
+
+		<div id="panel">
+			<p>
+				<form id="form" onsubmit="return false;">
+			    	Core ID : <input class="input" type="text" id="input1" />
+			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input1', 0);" id="submit"/> </a>
+				</form>
+			</p>
+
+			<p>
+				<form id="form" onsubmit="return false;">
+			    	Access Token : <input class="input" type="text" id="input2" />
+			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input2', 1);" id="submit"/> </a>
+				</form>
+			</p>
+			<p>
+				<form id="form" onsubmit="return false;">
+			    	Ingredient 1 : <input class="input" type="text" id="input3" />
+			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input3', 2);" id="submit"/> </a>
+				</form>
+			</p>
+
+			<p>
+				<form id="form" onsubmit="return false;">
+			    	Ingredient 2 : <input class="input" type="text" id="input4" />
+			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input4', 3);" id="submit"/> </a>
+				</form>
+			</p>
+			<p>
+				<form id="form" onsubmit="return false;">
+			    	Ingredient 3 : <input class="input" type="text" id="input5" />
+			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input5', 4);" id="submit"/> </a>
+				</form>
+			</p>
+
+			<p>
+				<form id="form" onsubmit="return false;">
+			    	Ingredient 4 : <input class="input" type="text" id="input6" />
+			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input6', 5);" id="submit"/> </a>
+				</form>
+			</p>
+		</div>
+
+		<p class="slide"><a href="#" class="btn-slide"><input type="image" src="Media\setup.png"/></a></p>
+
+			<script>
+
+				var core_ID;
+				var accessKey;
+				var ing1;
+				var ing2;
+				var ing3;
+				var ing4;
+				
+				var inputElems = [core_ID, accessKey, ing1, ing2, ing3, ing4];
+
+				function inputHandler(arg, num) {
+		    		var input = document.getElementById(arg).value;
+		    		alert(input);
+		    		inputElems[num] = input;
+		    		console.log(inputElems[num]);
+		    		console.log(inputElems[num] + " = " + input);
+				};
+
+
+
+				function sendApiRequest(v) {
+					var coreCall = "https://api.spark.io/v1/devices/" + core_ID + "/mix";
+		    		console.log('foo ' + v);
+		    		$.post(coreCall, {access_token: accessKey, arg: v});
+				};
+
+				$(document).ready(function(){
+
+					$(".btn-slide").click(function(){
+						$("#panel").slideToggle("slow");
+						$(this).toggleClass("active"); return false;
+					});
+	
+				});
+
+
+			</script>	
+	</BODY>
+</HTML>
