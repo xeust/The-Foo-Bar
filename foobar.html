@@ -4,154 +4,124 @@
 		<title>THE FOOBAR</title>
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-
-		<style>
-
-
-			body {
-
-				background-attachment: fixed;
-				background-size: 100%;
-				color : black;
-				text-align: center;
-				font-family: "Courier New";
-				font-size: 400%;
-
-			}
-
-			p1{
-				font-family: Courier;
-				font-size: 250%;
-			}
+		<script src="jQuery.knob.js"></script>
+		<link rel="stylesheet" type="text/css" href="foobar.css">
 
 
-			#btnimg {
-				width: auto;
-				height: 40%;
-			}
-
-			.input {
-				width: 20%;
-				height: 5%;
-			}
-
-
-			#submit {
-				width: 10%;
-				height: 5%;
-
-			}
-
-			#panel {
-				border-top: solid 2px #CC9966;
-				background: white;
-				height: 1000px;
-				display: none;
-			}
-
-			.slide {
-				margin: 0;
-				padding: 0;
-				border-top: solid 2px #CC9966;
-
-				
-			}
-
-			.btn-slide {
-				text-align: center;
-				width: 100px;
-				height: 50px;
-				padding: 0px 100px 0 0;
-				margin-bottom: 100px;
-				display: block;
-				color: #fff;
-				text-decoration: none;
-			}
-
-			
+		<style>	
 
 		</style>
 		
 	</HEAD>
 	<BODY>
-		<div style="margin-top: 5%;">
+		<div class="top" style="margin-top: 5%;">
 			<p1>THE FOOBAR</p1>
 		</div>
 
-		<div style="margin-top: 8%;">
+		<div style="margin-top: 8%; font-size: 300%;">
 
 			<p>What would you like to drink?</p>
 
 		</div>
+		<div>
+			<div>
+				<input type="text" class="dial1" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="#C39A6B"  data-rotation="anticlockwise" data-angleOffset=180 data-angleArc=270 />
+				<input type="text" class="dial2" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="#C39A6B" data-angleOffset=270 data-angleArc=270 />
+			</div>
+			<div>
+				<input type="text" class="dial3" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="#C39A6B" data-angleOffset=90 data-angleArc=270 />
+				<input type="text" class="dial4" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="#C39A6B"  data-rotation="anticlockwise" data-angleArc=270 />
+			</div>
+		</div>
 
+
+		<div ><a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"><input type="image" src="Media\mix.png" id="control" onclick		="mixHandler()"/></a></div>
 
 		<div id="panel">
 			<p>
 				<form id="form" onsubmit="return false;">
-			    	Core ID : <input class="input" type="text" id="input1" />
-			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input1', 0);" id="submit"/> </a>
+			    	Core ID : <input class="input" type="text" id="input1"/>
+			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input1', 'zero');" id="submit"/> </a>
 				</form>
 			</p>
 
 			<p>
 				<form id="form" onsubmit="return false;">
 			    	Access Token : <input class="input" type="text" id="input2" />
-			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input2', 1);" id="submit"/> </a>
+			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input2', 'one');" id="submit"/> </a>
 				</form>
 			</p>
 			<p>
 				<form id="form" onsubmit="return false;">
 			    	Ingredient 1 : <input class="input" type="text" id="input3" />
-			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input3', 2);" id="submit"/> </a>
+			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input3', 'two');" id="submit"/> </a>
 				</form>
 			</p>
 
 			<p>
 				<form id="form" onsubmit="return false;">
 			    	Ingredient 2 : <input class="input" type="text" id="input4" />
-			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input4', 3);" id="submit"/> </a>
+			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input4', 'three');" id="submit"/> </a>
 				</form>
 			</p>
 			<p>
 				<form id="form" onsubmit="return false;">
 			    	Ingredient 3 : <input class="input" type="text" id="input5" />
-			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input5', 4);" id="submit"/> </a>
+			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input5', 'four');" id="submit"/> </a>
 				</form>
 			</p>
 
 			<p>
 				<form id="form" onsubmit="return false;">
 			    	Ingredient 4 : <input class="input" type="text" id="input6" />
-			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input6', 5);" id="submit"/> </a>
+			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input6', 'five');" id="submit"/> </a>
 				</form>
 			</p>
 		</div>
 
-		<p class="slide"><a href="#" class="btn-slide"><input type="image" src="Media\setup.png"/></a></p>
+		<p class="slide"><a href="#" class="btn-slide" onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"><input type="image" src="Media\setup.png"/></a></p>
 
 			<script>
 
-				var core_ID;
-				var accessKey;
-				var ing1;
-				var ing2;
-				var ing3;
-				var ing4;
-				
-				var inputElems = [core_ID, accessKey, ing1, ing2, ing3, ing4];
+				var ml1;
+				var ml2;
+				var ml3;
+				var ml4;
 
-				function inputHandler(arg, num) {
-		    		var input = document.getElementById(arg).value;
-		    		alert(input);
-		    		inputElems[num] = input;
-		    		console.log(inputElems[num]);
-		    		console.log(inputElems[num] + " = " + input);
+				var inputElems = {};
+				// inputElems['zero'] = core_ID;
+				// inputElems['one'] = accessKey;
+				// inputElems['two'] = ing1;
+				// inputElems['three'] = ing2;
+				// inputElems['four'] = ing3;
+				// inputElems['five'] = ing4;
+
+				function inputHandler(id, key) {
+		    		inputElems[key] = $("#" + id).val();
+
+		    		alert(inputElems[key]);
+		    		console.log(inputElems[key]);
+		    		console.log(inputElems[key] + " = " + id);
 				};
 
+				function mixHandler(){
 
+					var total = ml1 + ml2 + ml3 + ml4;
+					if (total > 400){
+						alert("2 Turnt...try a smaller drink");
+					} else {
+						var stringVal1 = ml1*.6;
+						var stringVal2 = ml2*.6;
+						var stringVal3 = ml3*.6;
+						var stringVal4 = ml4*.6;
+						var concatStr = "" + stringVal1 + "," + stringVal2 + "," + stringVal3 + "," + stringVal4;
+						sendApiRequest(concatStr);
+					}
+
+				}
 
 				function sendApiRequest(v) {
-					var coreCall = "https://api.spark.io/v1/devices/" + core_ID + "/mix";
+					var coreCall = "https://api.spark.io/v1/devices/" + inputElems['zero'] + "/mix";
 		    		console.log('foo ' + v);
 		    		$.post(coreCall, {access_token: accessKey, arg: v});
 				};
@@ -164,6 +134,36 @@
 					});
 	
 				});
+
+				$(".dial1").knob({ 
+									'release' : function (v) { 
+		    													ml1 = v;
+		    													console.log(ml1);
+		    					}
+				});
+
+				$(".dial2").knob({ 
+									'release' : function (v) { 
+		    													ml2 = v;
+		    													console.log(ml2);
+		    					}
+				});
+
+				$(".dial3").knob({ 
+									'release' : function (v) { 
+		    													ml3 = v;
+		    													console.log(ml3);
+		    					}
+				});
+
+				$(".dial4").knob({ 
+									'release' : function (v) { 
+		    													ml4 = v;
+		    													console.log(ml4);
+		    					}
+				});
+
+
 
 
 			</script>	
