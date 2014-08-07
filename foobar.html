@@ -123,7 +123,7 @@
 				function sendApiRequest(v) {
 					var coreCall = "https://api.spark.io/v1/devices/" + inputElems['zero'] + "/mix";
 		    		console.log('foo ' + v);
-		    		$.post(coreCall, {access_token: accessKey, arg: v});
+		    		$.post(coreCall, {access_token: inputElems['one'], arg: v});
 				};
 
 				$(document).ready(function(){
