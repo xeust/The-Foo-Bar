@@ -46,6 +46,38 @@ p1 {
     font-size: 300%
 }
 
+#ing1Bar {
+    font-size: 400%;
+    font-weight: bold;
+    color: #FF4500;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#ing2Bar {
+    font-size: 400%;
+    font-weight: bold;
+    color: #ffec03;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#ing3Bar {
+    font-size: 400%;
+    font-weight: bold;
+    color: #3399FF;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#ing4Bar {
+    font-size: 400%;
+    font-weight: bold;
+    color: #66FF33;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
 #control {
 
     margin-top: 5%;
