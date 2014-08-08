@@ -34,7 +34,7 @@ p1 {
 
 #panel {
 
-    border-top: solid 2px #CC9966;
+    border-top: solid 2px lightblue;
     background: white;
     height: 150%;
     display: none;
@@ -54,7 +54,7 @@ p1 {
 
     margin: 3px;
     padding: 0;
-    border-top: solid 2px #CC9966;
+    border-top: solid 2px lightblue;
 
 }
 
@@ -72,7 +72,7 @@ p1 {
     width: 100px;
     height: 50px;
     display: block;
-    color: #fff;
-    text-decoration: none;
+    color: lightblue;
+    text-decoration: lightblue;
 
 }
