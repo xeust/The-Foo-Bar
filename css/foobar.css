@@ -1,0 +1,78 @@
+body {
+
+    background-attachment: fixed;
+    background-size: 100%;
+    background-color: lightgray;
+    color : black;
+    text-align: center;
+    font-family: "Courier New";
+}
+
+p1 {
+
+    font-family: Courier;
+    font-size: 250%;
+}
+
+.top {
+    font-size: 400%;
+}
+
+
+#btnimg {
+
+    width: auto;
+    height: 40%;
+}
+
+#submit {
+
+    width: auto;
+    height: 5%;
+
+}
+
+#panel {
+
+    border-top: solid 2px #CC9966;
+    background: white;
+    height: 150%;
+    display: none;
+    font-size: 300%
+}
+
+#control {
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 30%;
+    width: auto;
+
+}
+
+.slide {
+
+    margin: 3px;
+    padding: 0;
+    border-top: solid 2px #CC9966;
+
+}
+
+.btn-slide {
+    margin: 0px auto;
+}
+
+.btn{
+    margin: 5px;
+}
+
+.btn-slide {
+
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+
+}
