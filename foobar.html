@@ -19,25 +19,41 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-6">
-            <input type="text" class="dial1" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue"  data-rotation="anticlockwise" data-angleOffset=180 data-angleArc=270 />
+        <div class="col-md-6 hidden-xs hidden-sm">
+            <input type="text" class="dial1" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue" data-rotation="anticlockwise" data-angleOffset=180 data-angleArc=270 />
         </div>
-        <div class="col-sm-6">
+        <div class="col-md-6 hidden-xs hidden-sm">
             <input type="text" class="dial2" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue" data-angleOffset=270 data-angleArc=270 />
         </div>
     </div>
 
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-md-6 hidden-xs hidden-sm">
             <input type="text" class="dial3" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue" data-angleOffset=90 data-angleArc=270 />
         </div>
-        <div class="col-sm-6">
-            <input type="text" class="dial4" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue"  data-rotation="anticlockwise" data-angleArc=270 />
+        <div class="col-md-6 hidden-xs hidden-sm">
+            <input type="text" class="dial4" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue" data-rotation="anticlockwise" data-angleArc=270 />
         </div>
     </div>
 
+    <div class="col-sm-12 visible-xs visible-sm">
+        <input type="text" class="dial1" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue" data-angleOffset=225 data-rotation="anticlockwise" data-angleArc=270 />
+    </div>
+
+    <div class="col-sm-12 visible-xs visible-sm">
+        <input type="text" class="dial2" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue" data-angleOffset=225 data-rotation="anticlockwise" data-angleArc=270 />
+    </div>
+
+    <div class="col-sm-12 visible-xs visible-sm">
+        <input type="text" class="dial3" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue" data-angleOffset=225 data-rotation="anticlockwise" data-angleArc=270 />
+    </div>
+
+    <div class="col-sm-12 visible-xs visible-sm">
+        <input type="text" class="dial4" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue" data-angleOffset=225 data-rotation="anticlockwise" data-angleArc=270 />
+    </div>
+
     <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
+        <div class="col-xs-6 centerElement">
             <input class="btn btn-lg btn-block" type="button" value="Mix" onclick="mixHandler()" style="text-align:center"/>
         </div>
     </div>
@@ -52,7 +68,7 @@
             <div class ="row">
                 <div class ="col-sm-10">
                     <form id="form" onsubmit="return false;">
-                        Core ID : <input class="input" type="text" id="input1"/>
+                        SparkCore ID : <input class="input" type="text" id="input1"/>
                         <input type="button" class="btn" value="submit" onclick="inputHandler('input1', 'zero');" id="submit"/>
                     </form>
                 </div>
@@ -71,7 +87,7 @@
 
             <div class ="row">
                 <div class ="col-sm-10">
-                    <form id="form" onsubmit="return false;">
+                    <form onsubmit="return false;">
                         Ingredient 1 : <input class="input" type="text" id="input3" />
                         <input type="button" class="btn" value="submit" onclick="inputHandler('input3', 'two');" id="submit"/>
                     </form>

@@ -28,7 +28,7 @@ p1 {
 #submit {
 
     width: auto;
-    height: 5%;
+    height: auto;
 
 }
 
@@ -48,6 +48,12 @@ p1 {
     height: 30%;
     width: auto;
 
+}
+
+.centerElement {
+    float: none !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
 }
 
 .slide {
