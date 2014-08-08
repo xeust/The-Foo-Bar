@@ -6,7 +6,6 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 		<script src="jQuery.knob.js"></script>
 		<link rel="stylesheet" type="text/css" href="foobar.css">
-		<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 
 
 		<style>	
@@ -27,19 +26,45 @@
 		<div style="height:420px;width:100%">
 	        <div style="position:relative;width:400px;margin:auto">
 	        	<div style="position:absolute;left:0px;top:0px">
-	                <input class="dial1" data-min="0" data-max="5" data-bgColor="#333" data-fgColor="#FF4500" data-displayInput=false data-width="400" data-height="400" data-thickness=".23">
+	                <input class="dial1" data-min="0" data-max="100" data-step="10" data-bgColor="#333" data-fgColor="#FF4500" data-displayInput=false data-width="400" data-height="400" data-thickness=".23">
 	            </div>
 	            <div style="position:absolute;left:50px;top:50px">
-	                <input class="dial2" data-min="0" data-max="5" data-bgColor="#333" data-fgColor="#ffec03" data-displayInput=false data-width="300" data-height="300" data-thickness=".3">
+	                <input class="dial2" data-min="0" data-max="100" data-step="10" data-bgColor="#333" data-fgColor="#ffec03" data-displayInput=false data-width="300" data-height="300" data-thickness=".3">
 	            </div>
 	            <div style="position:absolute;left:100px;top:100px">
-	                <input class="dial3" data-min="0" data-max="5" data-bgColor="#333" data-displayInput=false data-width="200" data-height="200" data-thickness=".45">
+	                <input class="dial3" data-min="0" data-max="100" data-step="10" data-bgColor="#333" data-displayInput=false data-width="200" data-height="200" data-thickness=".45">
 	            </div>
 	            <div style="position:absolute;left:150px;top:150px">
-	                <input class="dial4" data-min="0" data-max="5" data-bgColor="#333" data-fgColor="rgb(127, 255, 0)" data-displayInput=false data-width="100" data-height="100" data-thickness=".45">
+	                <input class="dial4" data-min="0" data-max="100" data-step="10" data-bgColor="#333" data-fgColor="rgb(127, 255, 0)" data-displayInput=false data-width="100" data-height="100" data-thickness=".45">
 	            </div>
 	        </div>
 	    </div>
+
+		<div id = "ing1Bar">
+			<span id="ing1Vol"></span>
+			<span> parts </span>
+			<span id="ing1Dis"></span>
+		</div>
+
+		<div id = "ing2Bar">
+			<span id="ing2Vol"></span>
+			<span> parts </span>
+			<span id="ing2Dis"></span>
+		</div>
+
+		<div id = "ing3Bar">
+			<span id="ing3Vol"></span>
+			<span> parts </span>
+			<span id="ing3Dis"></span>
+		</div>
+
+		<div id = "ing4Bar">
+			<span id="ing4Vol"></span>
+			<span> parts </span>
+			<span id="ing4Dis"></span>
+		</div>
+
+
 		<div ><a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"><input type="image" src="Media\mix.png" id="control" onclick ="mixHandler()"/></a></div>
 
 		<div id="panel">
@@ -88,18 +113,19 @@
 
 			<script>
 
-				var ml1;
-				var ml2;
-				var ml3;
-				var ml4;
+				var ml1 = 0;
+				var ml2 = 0;
+				var ml3 = 0;
+				var ml4 = 0;
 
 				var inputElems = {};
-				// inputElems['zero'] = core_ID;
-				// inputElems['one'] = accessKey;
-				// inputElems['two'] = ing1;
-				// inputElems['three'] = ing2;
-				// inputElems['four'] = ing3;
-				// inputElems['five'] = ing4;
+				var inputElemsStr = {};					
+				inputElemsStr['zero'] = "core_ID";
+				inputElemsStr['one'] = "accessKey";
+				inputElemsStr['two'] = "ing1Dis";
+				inputElemsStr['three'] = "ing2Dis";
+				inputElemsStr['four'] = "ing3Dis";
+				inputElemsStr['five'] = "ing4Dis";
 
 				function inputHandler(id, key) {
 		    		inputElems[key] = $("#" + id).val();
@@ -107,6 +133,8 @@
 		    		alert(inputElems[key]);
 		    		console.log(inputElems[key]);
 		    		console.log(inputElems[key] + " = " + id);
+
+		    		document.getElementById(inputElemsStr[key]).innerHTML = inputElems[key];
 				};
 
 				function mixHandler(){
@@ -144,6 +172,7 @@
 									'release' : function (v) { 
 		    													ml1 = v;
 		    													console.log(ml1);
+		    													document.getElementById("ing1Vol").innerHTML = ml1/20;
 		    					}
 				});
 
@@ -151,6 +180,7 @@
 									'release' : function (v) { 
 		    													ml2 = v;
 		    													console.log(ml2);
+		    													document.getElementById("ing2Vol").innerHTML = ml2/20;
 		    					}
 				});
 
@@ -158,6 +188,7 @@
 									'release' : function (v) { 
 		    													ml3 = v;
 		    													console.log(ml3);
+		    													document.getElementById("ing3Vol").innerHTML = ml3/20;
 		    					}
 				});
 
@@ -165,22 +196,15 @@
 									'release' : function (v) { 
 		    													ml4 = v;
 		    													console.log(ml4);
+		    													document.getElementById("ing4Vol").innerHTML = ml4/20;
 		    					}
 				});
 
-				$("#slider").slider(
-{
-            value:100,
-            min: 0,
-            max: 500,
-            step: 50,
-            slide: function( event, ui ) {
-                $( "#slider-value" ).html( ui.value );
-            }
-}
-);
+				document.getElementById("ing1Vol").innerHTML = ml1/20;
+				document.getElementById("ing2Vol").innerHTML = ml1/20;
+				document.getElementById("ing3Vol").innerHTML = ml1/20;
+				document.getElementById("ing4Vol").innerHTML = ml1/20;
 				
-
 			</script>	
 	</BODY>
 </HTML>
