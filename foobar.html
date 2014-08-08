@@ -20,47 +20,47 @@
 
     <div class="row">
         <div class="col-md-6 hidden-xs hidden-sm">
-            <input type="text" class="dial1" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue" data-rotation="anticlockwise" data-angleOffset=180 data-angleArc=270 />
+            <input type="text" class="dial1" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor=#550707 data-rotation="anticlockwise" data-angleOffset=180 data-angleArc=270 />
         </div>
         <div class="col-md-6 hidden-xs hidden-sm">
-            <input type="text" class="dial2" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue" data-angleOffset=270 data-angleArc=270 />
+            <input type="text" class="dial2" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor=#550707 data-angleOffset=270 data-angleArc=270 />
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-6 hidden-xs hidden-sm">
-            <input type="text" class="dial3" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue" data-angleOffset=90 data-angleArc=270 />
+            <input type="text" class="dial3" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor=#550707 data-angleOffset=90 data-angleArc=270 />
         </div>
         <div class="col-md-6 hidden-xs hidden-sm">
-            <input type="text" class="dial4" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue" data-rotation="anticlockwise" data-angleArc=270 />
+            <input type="text" class="dial4" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor=#550707 data-rotation="anticlockwise" data-angleArc=270 />
         </div>
     </div>
 
     <div class="col-sm-12 visible-xs visible-sm">
-        <input type="text" class="dial1" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue" data-angleOffset=225 data-rotation="anticlockwise" data-angleArc=270 />
+        <input type="text" class="dial1" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor=#550707 data-angleOffset=225 data-rotation="anticlockwise" data-angleArc=270 />
     </div>
 
     <div class="col-sm-12 visible-xs visible-sm">
-        <input type="text" class="dial2" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue" data-angleOffset=225 data-rotation="anticlockwise" data-angleArc=270 />
+        <input type="text" class="dial2" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor=#550707 data-angleOffset=225 data-rotation="anticlockwise" data-angleArc=270 />
     </div>
 
     <div class="col-sm-12 visible-xs visible-sm">
-        <input type="text" class="dial3" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue" data-angleOffset=225 data-rotation="anticlockwise" data-angleArc=270 />
+        <input type="text" class="dial3" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor=#550707 data-angleOffset=225 data-rotation="anticlockwise" data-angleArc=270 />
     </div>
 
     <div class="col-sm-12 visible-xs visible-sm">
-        <input type="text" class="dial4" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor="royalblue" data-angleOffset=225 data-rotation="anticlockwise" data-angleArc=270 />
+        <input type="text" class="dial4" data-min="0" data-max="300" data-step="10" data-width="300" data-height="300" data-fgColor=#550707 data-angleOffset=225 data-rotation="anticlockwise" data-angleArc=270 />
     </div>
 
     <div class="row">
         <div class="col-xs-6 centerElement">
-            <input class="btn btn-lg btn-block" type="button" value="Mix" onclick="mixHandler()" style="text-align:center"/>
+            <input class="btn btn-default btn-lg btn-block" type="button" value="Mix" onclick="mixHandler()" style="text-align:center"/>
         </div>
     </div>
 
     <p class="btn">
-        <a href="#" class="btn-slide"
-                ><input type="button" value="setup"/>
+        <a href="#" class="btn btn-lg btn-default btn-slide"
+                >setup
         </a>
 
     <div class ="row">
@@ -69,7 +69,7 @@
                 <div class ="col-sm-10">
                     <form id="form" onsubmit="return false;">
                         SparkCore ID : <input class="input" type="text" id="input1"/>
-                        <input type="button" class="btn" value="submit" onclick="inputHandler('input1', 'zero');" id="submit"/>
+                        <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input1', 'zero');" id="submit"/>
                     </form>
                 </div>
             </div>
@@ -79,7 +79,7 @@
                 <div class ="col-sm-10">
                     <form id="form" onsubmit="return false;">
                         Access Token : <input class="input" type="text" id="input2" />
-                        <input type="button" class="btn" value="submit" onclick="inputHandler('input2', 'one');" id="submit"/>
+                        <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input2', 'one');" id="submit"/>
                     </form>
                 </div>
             </div>
@@ -89,7 +89,7 @@
                 <div class ="col-sm-10">
                     <form onsubmit="return false;">
                         Ingredient 1 : <input class="input" type="text" id="input3" />
-                        <input type="button" class="btn" value="submit" onclick="inputHandler('input3', 'two');" id="submit"/>
+                        <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input3', 'two');" id="submit"/>
                     </form>
                 </div>
             </div>
@@ -99,7 +99,7 @@
                 <div class ="col-sm-10">
                     <form id="form" onsubmit="return false;">
                         Ingredient 2 : <input class="input" type="text" id="input4" />
-                        <input type="button" class="btn" value="submit" onclick="inputHandler('input4', 'three');" id="submit"/>
+                        <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input4', 'three');" id="submit"/>
                     </form>
                 </div>
             </div>
@@ -109,7 +109,7 @@
                 <div class ="col-sm-10">
                     <form id="form" onsubmit="return false;">
                         Ingredient 3 : <input class="input" type="text" id="input5" />
-                        <input type="button" class="btn" value="submit" onclick="inputHandler('input5', 'four');" id="submit"/>
+                        <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input5', 'four');" id="submit"/>
                     </form>
                 </div>
             </div>
@@ -119,7 +119,7 @@
                 <div class ="col-sm-10">
                     <form id="form" onsubmit="return false;">
                         Ingredient 4 : <input class="input" type="text" id="input6" />
-                        <input type="button" class="btn" value="submit" onclick="inputHandler('input6', 'five');" id="submit"/>
+                        <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input6', 'five');" id="submit"/>
                     </form>
                 </div>
             </div>

@@ -2,8 +2,8 @@ body {
 
     background-attachment: fixed;
     background-size: 100%;
-    background-color: lightgray;
-    color : black;
+    background-color: #A59484;
+    color : #141319;
     text-align: center;
     font-family: "Courier New";
 }
@@ -34,8 +34,8 @@ p1 {
 
 #panel {
 
-    border-top: solid 2px lightblue;
-    background: white;
+    border-top: solid 2px #550707;
+    background: #E6E7E1;
     height: 150%;
     display: none;
     font-size: 300%
@@ -60,7 +60,7 @@ p1 {
 
     margin: 3px;
     padding: 0;
-    border-top: solid 2px lightblue;
+    border-top: solid 2px #550707;
 
 }
 
@@ -70,15 +70,25 @@ p1 {
 
 .btn{
     margin: 5px;
+    color: #A59484;
+}
+
+.btn-default{
+    color: #A59484;
+}
+
+.btn-hover{
+    color: #A59484;
+    background-color: #E6E7E1;
 }
 
 .btn-slide {
 
     text-align: center;
-    width: 100px;
-    height: 50px;
+    width: auto;
+    height: auto;
     display: block;
-    color: lightblue;
-    text-decoration: lightblue;
+    color: #A59484;
+    text-decoration: #A59484;
 
 }
