@@ -60,68 +60,53 @@
 
     <div class ="row">
         <div class="col-xs-6 centerElement">
-            <div class="btn btn-lg btn-default btn-block" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+            <div class="btn btn-lg btn-default btn-block centerElement" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                 Setup
             </div>
             <div id="collapseOne" class="panel panel-collapse collapse centerElement">
-                <div class ="row">
-                    <div class ="col-xs-10">
-                        <form id="form" onsubmit="return false;">
-                            SparkCore ID : <input class="input" type="text" id="input1"/>
+                <form class="form-horizontal" role="form">
+                    Enter Values
+                    <div class="form-group form-group-sm">
+                        <div class="col-xs-10 centerElement">
+                            <input class="form-control" type="text" id="input1" placeholder="core id">
                             <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input1', 'zero');" id="submit"/>
-                        </form>
+                        </div>
                     </div>
-                </div>
 
-
-                <div class ="row">
-                    <div class ="col-xs-10">
-                        <form id="form" onsubmit="return false;">
-                            Access Token : <input class="input" type="text" id="input2" />
+                    <div class="form-group form-group-sm">
+                        <div class="col-xs-10 centerElement">
+                            <input class="form-control" type="text" id="input2" placeholder="Access Token">
                             <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input2', 'one');" id="submit"/>
-                        </form>
+                        </div>
                     </div>
-                </div>
 
-
-                <div class ="row">
-                    <div class ="col-xs-10">
-                        <form onsubmit="return false;">
-                            Ingredient 1 : <input class="input" type="text" id="input3" />
+                    <div class="form-group form-group-sm">
+                        <div class="col-xs-10 centerElement">
+                            <input class="form-control" type="text" id="input3" placeholder="Ingredient 1">
                             <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input3', 'two');" id="submit"/>
-                        </form>
+                        </div>
                     </div>
-                </div>
 
-
-                <div class ="row">
-                    <div class ="col-xs-10">
-                        <form id="form" onsubmit="return false;">
-                            Ingredient 2 : <input class="input" type="text" id="input4" />
+                    <div class="form-group form-group-sm">
+                        <div class="col-xs-10 centerElement">
+                            <input class="form-control" type="text" id="input4" placeholder="Ingredient 2">
                             <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input4', 'three');" id="submit"/>
-                        </form>
+                        </div>
                     </div>
-                </div>
 
-
-                <div class ="row">
-                    <div class ="col-xs-10">
-                        <form id="form" onsubmit="return false;">
-                            Ingredient 3 : <input class="input" type="text" id="input5" />
+                    <div class="form-group form-group-sm">
+                        <div class="col-xs-10 centerElement">
+                            <input class="form-control" type="text" id="input5" placeholder="Ingredient 3">
                             <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input5', 'four');" id="submit"/>
-                        </form>
+                        </div>
                     </div>
-                </div>
 
-
-                <div class ="row">
-                    <div class ="col-xs-10">
-                        <form id="form" onsubmit="return false;">
-                            Ingredient 4 : <input class="input" type="text" id="input6" />
+                    <div class="form-group form-group-sm">
+                        <div class="col-xs-10 centerElement">
+                            <input class="form-control" type="text" id="input6" placeholder="Ingredient 4">
                             <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input6', 'five');" id="submit"/>
-                        </form>
+                        </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>
