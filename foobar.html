@@ -8,9 +8,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="css/foobar.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-slider.css" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
     <script src="js/jQuery.knob.js"></script>
+    <script>
+        $(function() {
+            // setup master volume
+            $( "#master1" ).slider({
+                value: 60,
+                orientation: "vertical",
+                range: "min",
+                animate: true
+            });
+            $( "#master2" ).slider({
+                value: 60,
+                orientation: "vertical",
+                range: "min",
+                animate: true
+            });
+            $( "#master3" ).slider({
+                value: 60,
+                orientation: "vertical",
+                range: "min",
+                animate: true
+            });
+            $( "#master4" ).slider({
+                value: 60,
+                orientation: "vertical",
+                range: "min",
+                animate: true
+            });
 
+            $( "#master5" ).slider({
+                value: 60,
+                orientation: "horizontal",
+                range: "min",
+                animate: true
+            });
+        });
+    </script>
 </HEAD>
 <BODY>
 <div class="container-fluid">
@@ -18,45 +55,58 @@
         <h1>The Foobar</h1>
         <h2>What would you like to drink?</h2>
     </div>
-    <div style="height:820px;width:100%">
-        <div style="position:relative;width:800px;margin:auto">
-            <div style="position:absolute;left:0px;top:0px">
-                <input class="dial1" data-min="0" data-max="100" data-step="10" data-bgColor="#333" data-fgColor="#9CCF31" data-displayInput=false data-width="800" data-height="800" data-thickness=".23">
-            </div>
-            <div style="position:absolute;left:100px;top:100px">
-                <input class="dial2" data-min="0" data-max="100" data-step="10" data-bgColor="#333" data-fgColor="#CE0000" data-displayInput=false data-width="600" data-height="600" data-thickness=".3">
-            </div>
-            <div style="position:absolute;left:200px;top:200px">
-                <input class="dial3" data-min="0" data-max="100" data-step="10" data-bgColor="#333" data-fgcolor="#FF9E00" data-displayInput=false data-width="400" data-height="400" data-thickness=".45">
-            </div>
-            <div style="position:absolute;left:300px;top:300px">
-                <input class="dial4" data-min="0" data-max="100" data-step="10" data-bgColor="#333" data-fgColor="#009ECE" data-displayInput=false data-width="200" data-height="200" data-thickness=".75">
-            </div>
+
+    <div class="row">
+        <div class="col-xs-1 col-xs-offset-4" style="padding-bottom:20px;">
+            <div id="master1"></div>
+        </div>
+
+        <div class="col-xs-1" style="padding-bottom:20px;">
+            <div id="master2"></div>
+        </div>
+
+        <div class="col-xs-1" style="padding-bottom:20px;">
+            <div id="master3"></div>
+        </div>
+
+        <div class="col-xs-1" style="padding-bottom:20px;">
+            <div id="master4"></div>
         </div>
     </div>
 
-    <div id = "ing1Bar">
-        <span id="ing1Vol"></span>
-        <span> parts </span>
-        <span id="ing1Dis"></span>
+    <div id="master5" style="width:260px; margin:15px;"></div>
+
+    <div class="row">
+        <div id = "ing1Bar">
+            <span id="ing1Vol"></span>
+            <span> parts </span>
+            <span id="ing1Dis"></span>
+        </div>
     </div>
 
-    <div id = "ing2Bar">
-        <span id="ing2Vol"></span>
-        <span> parts </span>
-        <span id="ing2Dis"></span>
+    <div class="row">
+        <div id = "ing2Bar">
+            <span id="ing2Vol"></span>
+            <span> parts </span>
+            <span id="ing2Dis"></span>
+        </div>
     </div>
 
-    <div id = "ing3Bar">
-        <span id="ing3Vol"></span>
-        <span> parts </span>
-        <span id="ing3Dis"></span>
+    <div class="row">
+        <div id = "ing3Bar">
+            <span id="ing3Vol"></span>
+            <span> parts </span>
+            <span id="ing3Dis"></span>
+        </div>
     </div>
 
-    <div id = "ing4Bar">
-        <span id="ing4Vol"></span>
-        <span> parts </span>
-        <span id="ing4Dis"></span>
+    <div class="row">
+
+        <div id = "ing4Bar">
+            <span id="ing4Vol"></span>
+            <span> parts </span>
+            <span id="ing4Dis"></span>
+        </div>
     </div>
 
     <div class="row">
@@ -120,5 +170,6 @@
 </div>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/bootstrap-slider.js"></script>
 </BODY>
 </HTML>
