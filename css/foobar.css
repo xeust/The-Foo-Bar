@@ -2,8 +2,8 @@ body {
 
     background-attachment: fixed;
     background-size: 100%;
-    background-color: #A59484;
-    color : #141319;
+    background-color: lightgray;
+    color : black;
     text-align: center;
     font-family: "Courier New";
 }
@@ -14,58 +14,15 @@ p1 {
     font-size: 250%;
 }
 
-.top {
-    font-size: 400%;
-}
-
-
-#btnimg {
-
-    width: auto;
-    height: 40%;
-}
-
 #submit {
-
     width: auto;
     height: auto;
-
-}
-
-#panel {
-
-    border-top: solid 2px #550707;
-    background: #E6E7E1;
-    height: 150%;
-    display: none;
-    font-size: 300%
-}
-
-#control {
-
-    margin-top: 5%;
-    margin-bottom: 5%;
-    height: 30%;
-    width: auto;
-
 }
 
 .centerElement {
     float: none !important;
     margin-left:auto !important;
     margin-right:auto !important;
-}
-
-.slide {
-
-    margin: 3px;
-    padding: 0;
-    border-top: solid 2px #550707;
-
-}
-
-.btn-slide {
-    margin: 0px auto;
 }
 
 .btn{
@@ -81,65 +38,6 @@ p1 {
 .btn-hover{
     color: #A59484;
     background-color: #E6E7E1;
-}
-
-.btn-slide {
-
-    text-align: center;
-    width: auto;
-    height: auto;
-    display: block;
-    color: #A59484;
-    text-decoration: #A59484;
-
-}
-
-body {
-
-    background-attachment: fixed;
-    background-size: 100%;
-    color : black;
-    text-align: center;
-    font-family: "Courier New";
-}
-
-p1 {
-
-    font-family: Courier;
-    font-size: 250%;
-}
-
-.top {
-    font-size: 400%;
-}
-
-
-#btnimg {
-
-    width: auto;
-    height: 40%;
-}
-
-.input {
-    width: 20%;
-    height: 3%;
-}
-
-
-#submit {
-
-    width: auto;
-    height: 5%;
-
-}
-
-#panel {
-
-    border-top: solid 2px #CC9966;
-    background: white;
-    height: 1000px;
-    display: none;
-    font-size: 300%
 }
 
 #ing1Bar {
@@ -172,34 +70,4 @@ p1 {
     color: #009ECE;
     margin-top: 1%;
     margin-bottom: 1%;
-}
-
-#control {
-
-    margin-top: 5%;
-    margin-bottom: 5%;
-    height: 200px;
-    width: auto;
-
-}
-
-.slide {
-
-    margin: 0;
-    padding: 0;
-    border-top: solid 2px #CC9966;
-
-}
-
-.btn-slide {
-
-    text-align: center;
-    width: 100px;
-    height: 50px;
-    padding: 0px 100px 0 0;
-    margin-bottom: 100px;
-    display: block;
-    color: #fff;
-    text-decoration: none;
-
 }
