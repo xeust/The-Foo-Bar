@@ -1,210 +1,199 @@
 <!DOCTYPE HTML PUBLIC>
 <HTML>
-	<HEAD>
-		<title>THE FOOBAR</title>
-		
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-		<script src="jQuery.knob.js"></script>
-		<link rel="stylesheet" type="text/css" href="foobar.css">
+<HEAD>
+    <title>THE FOOBAR</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/foobar.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-slider.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 
 
-		<style>	
-
-		</style>
-		
-	</HEAD>
-	<BODY>
-		<div class="top" style="margin-top: 5%;">
-			<p1>THE FOOBAR</p1>
-		</div>
-
-		<div style="margin-top: 8%; font-size: 300%;">
-
-			<p>What would you like to drink?</p>
-
-		</div>
-		<div style="height:820px;width:100%">
-	        <div style="position:relative;width:800px;margin:auto">
-	        	<div style="position:absolute;left:0px;top:0px">
-	                <input class="dial1" data-min="0" data-max="100" data-step="10" data-bgColor="#333" data-fgColor="#9CCF31" data-displayInput=false data-width="800" data-height="800" data-thickness=".23">
-	            </div>
-	            <div style="position:absolute;left:100px;top:100px">
-	                <input class="dial2" data-min="0" data-max="100" data-step="10" data-bgColor="#333" data-fgColor="#CE0000" data-displayInput=false data-width="600" data-height="600" data-thickness=".3">
-	            </div>
-	            <div style="position:absolute;left:200px;top:200px">
-	                <input class="dial3" data-min="0" data-max="100" data-step="10" data-bgColor="#333" data-fgcolor="#FF9E00" data-displayInput=false data-width="400" data-height="400" data-thickness=".45">
-	            </div>
-	            <div style="position:absolute;left:300px;top:300px">
-	                <input class="dial4" data-min="0" data-max="100" data-step="10" data-bgColor="#333" data-fgColor="#009ECE" data-displayInput=false data-width="200" data-height="200" data-thickness=".75">
-	            </div>
-	        </div>
-	    </div>
-
-		<div id = "ing1Bar">
-			<span id="ing1Vol"></span>
-			<span> parts </span>
-			<span id="ing1Dis"></span>
-		</div>
-
-		<div id = "ing2Bar">
-			<span id="ing2Vol"></span>
-			<span> parts </span>
-			<span id="ing2Dis"></span>
-		</div>
-
-		<div id = "ing3Bar">
-			<span id="ing3Vol"></span>
-			<span> parts </span>
-			<span id="ing3Dis"></span>
-		</div>
-
-		<div id = "ing4Bar">
-			<span id="ing4Vol"></span>
-			<span> parts </span>
-			<span id="ing4Dis"></span>
-		</div>
 
 
-		<div ><a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"><input type="image" src="Media\mix.png" id="control" onclick ="mixHandler()"/></a></div>
+    
+</HEAD>
+<BODY>
+<div class="container-fluid">
 
-		<div id="panel">
-			<p>
-				<form id="form" onsubmit="return false;">
-			    	Core ID : <input class="input" type="text" id="input1"/>
-			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input1', 'zero');" id="submit"/> </a>
-				</form>
-			</p>
+    <div class="row" style="padding-bottom:20px;">
+        <div class="text-center" ><a><span><img src="Media/logo.png" class="img-responsive center-block" alt="Responsive image"></span></a></div>
+    </div>
 
-			<p>
-				<form id="form" onsubmit="return false;">
-			    	Access Token : <input class="input" type="text" id="input2" />
-			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input2', 'one');" id="submit"/> </a>
-				</form>
-			</p>
-			<p>
-				<form id="form" onsubmit="return false;">
-			    	Ingredient 1 : <input class="input" type="text" id="input3" />
-			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input3', 'two');" id="submit"/> </a>
-				</form>
-			</p>
+    <div id="gap"></div>
 
-			<p>
-				<form id="form" onsubmit="return false;">
-			    	Ingredient 2 : <input class="input" type="text" id="input4" />
-			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input4', 'three');" id="submit"/> </a>
-				</form>
-			</p>
-			<p>
-				<form id="form" onsubmit="return false;">
-			    	Ingredient 3 : <input class="input" type="text" id="input5" />
-			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input5', 'four');" id="submit"/> </a>
-				</form>
-			</p>
+    <div id="gap"></div>
 
-			<p>
-				<form id="form" onsubmit="return false;">
-			    	Ingredient 4 : <input class="input" type="text" id="input6" />
-			    	<a onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"> <input type="image" src="Media\submit.png" onclick="inputHandler('input6', 'five');" id="submit"/> </a>
-				</form>
-			</p>
-		</div>
+    <div class="row" id="how">
+        How much would you like to drink?
+    </div>
 
-		<p class="slide"><a href="#" class="btn-slide" onmouseout="this.style.opacity=1;" onmouseover="this.style.opacity=0.6;"><input type="image" src="Media\setup.png"/></a></p>
+    <div id="gap"></div>
+    <div id="gap"></div>
+    <div class="row" id="volumeSelect" style="padding-bottom:20px;">
+            <div class="col-md-4" style="padding-bottom:20px;">
+                <a onclick="sizeSelect(50);" onmouseout="this.style.opacity=1;" 
+                onmouseover="this.style.opacity=0.6;"> <span> <input type="image" src="Media\small.png" style="height:250px"/> </span> </a>
+            </div>
 
-			<script>
+            <div class="col-md-4" style="padding-bottom:20px;">
+                <a onclick="sizeSelect(150);" onmouseout="this.style.opacity=1;" 
+                onmouseover="this.style.opacity=0.6;"> <span> <input type="image" src="Media\medium.png" style="height:250px"/> </span> </a>
+            </div>
 
-				var ml1 = 0;
-				var ml2 = 0;
-				var ml3 = 0;
-				var ml4 = 0;
+            <div class="col-md-4" style="padding-bottom:20px;">
+                <a onclick="sizeSelect(250);" onmouseout="this.style.opacity=1;" 
+                onmouseover="this.style.opacity=0.6;"> <span> <input type="image" src="Media\large.png" style="height:250px"/> </span> </a>
+            </div> 
+    </div>
+    <div id="gap"></div> 
 
-				var inputElems = {};
-				var inputElemsStr = {};					
-				inputElemsStr['zero'] = "core_ID";
-				inputElemsStr['one'] = "accessKey";
-				inputElemsStr['two'] = "ing1Dis";
-				inputElemsStr['three'] = "ing2Dis";
-				inputElemsStr['four'] = "ing3Dis";
-				inputElemsStr['five'] = "ing4Dis";
+    <div class="row" id="sizeBar">
+                <span> Current size:  </span>
+                <span id="ozDis"></span>
+                <span> ounces</span>
+    </div>
 
-				function inputHandler(id, key) {
-		    		inputElems[key] = $("#" + id).val();
+    <div id="gap"></div>
+    <div id="gap"></div>  
 
-		    		alert(inputElems[key]);
-		    		console.log(inputElems[key]);
-		    		console.log(inputElems[key] + " = " + id);
+    <div class="row" >
 
-		    		document.getElementById(inputElemsStr[key]).innerHTML = inputElems[key];
-				};
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-2" style="padding-bottom:20px;">
+                    <div id="master1" data-slider-id='ex1Slider'></div>
+                </div>
 
-				function mixHandler(){
+                <div class="col-xs-2" style="padding-bottom:20px;">
+                    <div id="master2" data-slider-id='ex2Slider'></div>
+                </div>
 
-					var total = ml1 + ml2 + ml3 + ml4;
-					if (total > 400){
-						alert("2 Turnt...try a smaller drink");
-					} else {
-						var stringVal1 = ml1*.6;
-						var stringVal2 = ml2*.6;
-						var stringVal3 = ml3*.6;
-						var stringVal4 = ml4*.6;
-						var concatStr = "" + stringVal1 + "," + stringVal2 + "," + stringVal3 + "," + stringVal4;
-						sendApiRequest(concatStr);
-					}
+                <div class="col-xs-2" style="padding-bottom:20px;">
+                    <div id="master3" data-slider-id='ex3Slider'></div>
+                </div>
 
-				}
+                <div class="col-xs-2" style="padding-bottom:20px;">
+                    <div id="master4" data-slider-id='ex4Slider'></div>
+                </div>
+            </div>
+        </div>
 
-				function sendApiRequest(v) {
-					var coreCall = "https://api.spark.io/v1/devices/" + inputElems['zero'] + "/mix";
-		    		console.log('foo ' + v);
-		    		$.post(coreCall, {access_token: inputElems['one'], arg: v});
-				};
+        <div id="gap1"></div>
+  
 
-				$(document).ready(function(){
+        <div class="col-md-6">
 
-					$(".btn-slide").click(function(){
-						$("#panel").slideToggle("slow");
-						$(this).toggleClass("active"); return false;
-					});
-	
-				});
+            <div id = "ing1Bar">
+                <span id="ing1Vol"></span>
+                <span> parts </span>
+                <span id="ing1Dis"></span>
+            </div>
 
-				$(".dial1").knob({ 
-									'release' : function (v) { 
-		    													ml1 = v;
-		    													console.log(ml1);
-		    													document.getElementById("ing1Vol").innerHTML = ml1/20;
-		    					}
-				});
+            <div id="gap1"></div> 
 
-				$(".dial2").knob({ 
-									'release' : function (v) { 
-		    													ml2 = v;
-		    													console.log(ml2);
-		    													document.getElementById("ing2Vol").innerHTML = ml2/20;
-		    					}
-				});
+            <div id = "ing2Bar">
+                <span id="ing2Vol"></span>
+                <span> parts </span>
+                <span id="ing2Dis"></span>
+            </div>
 
-				$(".dial3").knob({ 
-									'release' : function (v) { 
-		    													ml3 = v;
-		    													console.log(ml3);
-		    													document.getElementById("ing3Vol").innerHTML = ml3/20;
-		    					}
-				});
+            <div id="gap1"></div> 
 
-				$(".dial4").knob({ 
-									'release' : function (v) { 
-		    													ml4 = v;
-		    													console.log(ml4);
-		    													document.getElementById("ing4Vol").innerHTML = ml4/20;
-		    					}
-				});
+            <div id = "ing3Bar">
+                <span id="ing3Vol"></span>
+                <span> parts </span>
+                <span id="ing3Dis"></span>
+            </div>
 
-				document.getElementById("ing1Vol").innerHTML = ml1/20;
-				document.getElementById("ing2Vol").innerHTML = ml1/20;
-				document.getElementById("ing3Vol").innerHTML = ml1/20;
-				document.getElementById("ing4Vol").innerHTML = ml1/20;
-				
-			</script>	
-	</BODY>
+
+            <div id="gap1"></div> 
+
+            <div id = "ing4Bar">
+                <span id="ing4Vol"></span>
+                <span> parts </span>
+                <span id="ing4Dis"></span>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="gap"></div>
+    <div id="gap"></div>
+
+
+    <div class="row">
+        <div class="col-xs-6 centerElement">
+            <input class="btn btn-default btn-lg btn-block" type="button" value="Mix" onclick="mixHandler()" style="text-align:center"/>
+        </div>
+    </div>
+
+    <div class ="row">
+        <div class="col-xs-6 centerElement">
+            <div class="btn btn-lg btn-default btn-block centerElement" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                Setup
+            </div>
+            <div id="collapseOne" class="panel panel-collapse collapse centerElement">
+                <form class="form-horizontal" role="form">
+                    Enter Values
+                    <div class="form-group form-group-sm">
+                        <div class="col-xs-10 centerElement">
+                            <input class="form-control" type="text" id="input1" placeholder="core id">
+                            <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input1', 'zero');" id="submit"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-sm">
+                        <div class="col-xs-10 centerElement">
+                            <input class="form-control" type="text" id="input2" placeholder="Access Token">
+                            <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input2', 'one');" id="submit"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-sm">
+                        <div class="col-xs-10 centerElement">
+                            <input class="form-control" type="text" id="input3" placeholder="Ingredient 1">
+                            <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input3', 'two');" id="submit"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-sm">
+                        <div class="col-xs-10 centerElement">
+                            <input class="form-control" type="text" id="input4" placeholder="Ingredient 2">
+                            <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input4', 'three');" id="submit"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-sm">
+                        <div class="col-xs-10 centerElement">
+                            <input class="form-control" type="text" id="input5" placeholder="Ingredient 3">
+                            <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input5', 'four');" id="submit"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-sm">
+                        <div class="col-xs-10 centerElement">
+                            <input class="form-control" type="text" id="input6" placeholder="Ingredient 4">
+                            <input type="button" class="btn btn-default btn-sm" value="submit" onclick="inputHandler('input6', 'five');" id="submit"/>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-slider.js"></script>
+
+
+
+</BODY>
 </HTML>

@@ -1,0 +1,116 @@
+body {
+
+    background-attachment: fixed;
+    background-size: 100%;
+    background-color:;
+    color : black;
+    text-align: center;
+    font-family: "Courier New";
+    d;
+}
+
+
+#submit {
+    width: auto;
+    height: auto;
+}
+
+.centerElement {
+    float: none !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+}
+
+.btn{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+}
+
+.btn-default{
+    color: #8A5D3B;
+    border-color: #8A5D3B;
+}
+
+.btn-primary {
+    color: #FFFFFF;
+    background-color: #8A5D3B;
+    border-color: #8A5D3B;
+
+}
+
+.btn-primary:hover{
+    background-color: #000000;
+}
+
+
+.btn-hover{
+    color: #8A5D3B;
+    background-color: #8A5D3B;
+}
+
+#ing1Bar {
+    font-size: 300%;
+
+    color: #4AC948;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#ing2Bar {
+    font-size: 300%;
+
+    color: #CE0000;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#ing3Bar {
+    font-size: 300%;
+
+    color: #FF9E00;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#ing4Bar {
+    font-size: 300%;
+
+    color: #009ECE;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#sizeBar {
+    font-size: 300%;
+
+    color: #000000;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#how {
+    font-size: 300%;
+
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#how1{
+    font-size: 350%;
+
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#gap{
+  height: 5%;
+}
+
+#gap1{
+  height: 3%;
+}
+
+
+
+
