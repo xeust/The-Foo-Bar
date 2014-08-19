@@ -1,3 +1,9 @@
+/*
+
+drinkVend.ino is firmware for the foobar, a Spark-powered cocktail dispensery
+
+*/
+
 
 int myMotorArray[4]; //initialize motor array so correct motor can be referenced
 int toMaking = 0; //integer representation of whether there is a drink to be made
