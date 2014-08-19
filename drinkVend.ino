@@ -60,7 +60,7 @@ void loop() {
 
 /*
 
-handler is the handler function for a spark.function() "mix" exposed to the internet.
+sparkHandler is the handler function for a spark.function() "mix" exposed to the internet.
 When the function is called, currCommand is set to the string passed into the function,
 while toMaking is set to 1 so that the loop will trip, moving a step further towards a made drink by calling strInter().
 
